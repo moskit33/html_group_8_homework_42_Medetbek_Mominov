@@ -1,4 +1,4 @@
-// @import mixins
+@import mixins
 
 // $colors: ('red': #e84c3d, 'yellow': #fdbd1f, 'green': #1bbc9b,)
 
@@ -26,6 +26,9 @@ body
 	border: 1px solid #2a6c78
 	border-top: none
 	padding: 26px 2.5% 20px
+	// position: fixed
+	// width: 100%
+	// max-width: 1101px
 	.header__logo
 		display: inline
 		color: white
@@ -36,14 +39,23 @@ body
 		position: relative
 		.menu__btn
 			display: block
-			position: absolute
+			position: relative
 			padding: 25px
-			right: 0
-			top: -3px
-			background: url(../images/mobile-btn-01.svg) no-repeat
-			background-size: 80%
-			&:hover > .menu__list
+			right: -7px
+			top: -36px
+			cursor: pointer
+			// background: url(../images/mobile-btn-01.svg) no-repeat
+			// background-size: 80%
+			img
+				width: 47px
+				height: auto
+			&:hover + .menu__list
 				display: block
+				-webkit-transition: all 1s ease-in-out
+				-moz-transition: all 1s ease-in-out
+				-ms-transition: all 1s ease-in-out
+				-o-transition: all 1s ease-in-out
+				transition: all 1s ease-in-out
 			@media screen and (min-width: 720px)
 				display: none
 		.menu__list
@@ -51,27 +63,101 @@ body
 			padding: 16px 0 0
 			margin: 0
 			position: absolute
-			right: -30px
+			right: -9px
 			top: 36px
+			&:hover 
+				display: block
 			@media screen and (min-width: 720px)
 				display: inline-block
 				padding: 4px 0 0
 				top: 0
 				right: 0
 				position: relative
+				background: transparent
 			.list__item
 				display: block
 				font-size: 20px
-				padding: 15px 40px
 				border: 1px solid #2a6c78
+				background: #29606b
+				.item__a
+					color: white
+					display: block
+					padding: 15px 40px 15px 40px
+				&:hover 
+					background: #4db5ca
 				@media screen and (min-width: 720px)
 					display: inline-block
 					font-size: 17px
-					padding: 0 0 0 35px
 					border: none
-				.item__a
-					color: white
+					background: transparent
+					&:hover
+						background: transparent
+					.item__a
+						padding: 0 0 0 35px
+
 .promo
-	padding: 300px 0
-	background: url(../uploads/bg-banner.jpg) 54% 50% no-repeat
+	padding: 137px 0 200px
+	background: url(../uploads/bg-banner.jpg) 50% 88% no-repeat
 	text-align: center
+	color: white
+	.promo__title
+		text-transform: uppercase
+		.title__big
+			font-size: 41px
+			letter-spacing: 5px
+			padding-bottom: 15px
+		.title__little
+			font-size: 29px
+			letter-spacing: 6px
+		.btn__transparent
+			font-size: 17px
+			color: white
+			margin-top: 24px
+			display: inline-block
+			padding: 10px 32px
+			border: 2px solid white
+			border-bottom: none
+			position: relative
+			.btn--triangle
+				display: block
+				position: absolute
+				bottom: -10px
+				transform: rotate(45deg)
+				left: 57px
+				border: 2px solid white
+				padding: 10px
+				border-left: none
+				border-top: none
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0px
+				left: 0px
+				border-bottom: 2px solid white
+				width: 40%
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0px
+				right: 0px
+				border-bottom: 2px solid white
+				width: 40%
+
+
+.services
+	display: flex
+	flex-direction: row
+	.services__block
+		display: block
+		width: 50%
+		padding: 55px 0
+		color: white
+		text-align: center
+		.blocks__img
+			display: block
+			width: 99px
+			height: 99px
+			background-color: #ffffff
+			border-radius: 50%
