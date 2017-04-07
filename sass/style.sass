@@ -1,13 +1,38 @@
 @import mixins
 
-// $colors: ('red': #e84c3d, 'yellow': #fdbd1f, 'green': #1bbc9b,)
+$colors: ('red': #e84c3d, 'yellow': #fdbd1f, 'green': #1bbc9b, 'purple': #9b58b5)
 
 
-// @each $colorName, $colorHex in $colors
-//   .btn-#{$colorName}
-//     +btn($colorHex)
+@each $colorName, $colorHex in $colors
+	.btn-#{$colorName}
+		+btn($colorHex)
+	.services__block-#{$colorName}
+		+services__block($colorHex)
+	.team__col-#{$colorName}
+		+team_col($colorHex)
 
-//     
+$icons: 'pencil', 'message', 'crown', 'user', 'mail'
+
+%icon
+	display: inline-block
+	position: relative
+	+size(100px)
+	border-radius: 50%
+	background: white 	
+	&::after
+		content: ''
+		position: absolute
+		top: 15px
+		left: 15px
+		+size(70px)
+		background: url(../images/svg-icons-services-01.svg) no-repeat
+
+@for $i from 0 to length($icons)
+	.icon-#{nth($icons, $i+1)}
+		@extend %icon
+		&::after
+			background-position-y: -(59px * $i)
+
 body
 	background: #29606b
 	font-size: 16px
@@ -17,7 +42,6 @@ body
 
 .container 
 	max-width: 1170px
-	// padding: 0 10px
 	width: 100%
 	margin: 0 auto
 	position: relative
@@ -26,9 +50,9 @@ body
 	border: 1px solid #2a6c78
 	border-top: none
 	padding: 26px 2.5% 20px
-	// position: fixed
-	// width: 100%
-	// max-width: 1101px
+	width: 100%
+	position: relative
+	z-index: 25
 	.header__logo
 		display: inline
 		color: white
@@ -37,6 +61,8 @@ body
 		display: inline-block
 		float: right
 		position: relative
+		right: 0
+		top: 0
 		.menu__btn
 			display: block
 			position: relative
@@ -63,7 +89,7 @@ body
 			padding: 16px 0 0
 			margin: 0
 			position: absolute
-			right: -9px
+			right: -15px
 			top: 36px
 			&:hover 
 				display: block
@@ -96,10 +122,11 @@ body
 						padding: 0 0 0 35px
 
 .promo
-	padding: 137px 0 200px
+	padding: 16% 0 15.7%
 	background: url(../uploads/bg-banner.jpg) 50% 88% no-repeat
 	text-align: center
 	color: white
+	margin-top: -79px
 	.promo__title
 		text-transform: uppercase
 		.title__big
@@ -145,19 +172,34 @@ body
 				border-bottom: 2px solid white
 				width: 40%
 
-
 .services
+	margin-top: -6%
 	display: flex
 	flex-direction: row
-	.services__block
-		display: block
-		width: 50%
-		padding: 55px 0
-		color: white
-		text-align: center
-		.blocks__img
-			display: block
-			width: 99px
-			height: 99px
-			background-color: #ffffff
-			border-radius: 50%
+	.services__title
+		font-size: 29px
+		text-transform: uppercase
+	.services__text
+		font-size: 16px
+
+.team
+	padding-top: 6%
+	text-align: center
+	
+	.team__title
+		+title_block
+	.col__avatar
+		display: inline-block
+		background-color: #FFF
+		background: url(../uploads/team-avatar-1.jpg) no-repeat
+		border-radius: 50%
+		+size(181px)
+	.col__text
+		font-family: 'Source Sans Pro', sans-serif
+		font-size: 15px
+		color: #76b2be
+
+.contact
+	text-align: center
+	.contact__title
+		+title_block

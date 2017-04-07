@@ -227,7 +227,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
-a {
+/*a {
   color: #337ab7;
   text-decoration: none;
 }
@@ -240,7 +240,7 @@ a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-figure {
+figure {*/
   margin: 0;
 }
 img {

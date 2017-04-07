@@ -1,39 +1,89 @@
-// %btn
-//   display: inline-block
-//   color: #ffffff
-//   text:
-//     transform: uppercase
-//     align: center
-//     decoration: none
-//   font:
-//     size: 15px
-//     family: 'Fjalla One'
-//     weight: 400
-//   padding: 10px 10px
+%btn
+  display: inline-block
+  color: #ffffff
+  text:
+    transform: uppercase
+    align: center
+    decoration: none
+  font:
+    size: 15px
+    family: 'Fjalla One'
+    weight: 400
+  padding: 10px 15px
+
+%triangle
+  content: ''
+  position: absolute
+  bottom: -10px
+  left: 37%
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: 10px 10px 0 10px
+
+=triangle($bgcolor)
+  &::after
+    @extend %triangle
+    border-color: $bgcolor transparent transparent transparent
 
 
-// =btn($bgcolor, $color)
-//   @extend %btn
-//   +triangle($bgcolor)
-//   background: $bgcolor
+=btn($bgcolor)
+  @extend %btn
+  +triangle($bgcolor)
+  background: $bgcolor
+  position: relative
+  margin-bottom: 15px
+
+%services
+  display: block
+  padding: 5% 0 10%
+  color: white
+  text-align: center
+  color: white
+  align-self: center  
+
+=services__block($bgName)
+  @extend %services
+  background: $bgName
+
+=team_col($borderColor)
+  .team__inner
+    border-top: 7px solid $borderColor
+    background: #245963
+    padding: 43px 0 50px
+
+=size($size)
+  width: $size
+  height: $size
+
+=title_block
+  color: white
+  text-transform: uppercase
+  .title__big
+    font-size: 29px
+  .title__litle
+    font-size: 21px
+    position: relative
+    display: inline-block
+    &::before
+      content: ''
+      position: absolute
+      top: 12px
+      left: -51%
+      width: 37%
+      border-bottom: 1px solid #387d89
+    &::after
+      content: ''
+      position: absolute
+      top: 12px
+      right: -51%
+      width: 37%
+      border-bottom: 1px solid #387d89
   
-
-// =triangle
-//   $::after
-//     content: ''
-//     position: absolute
-//     bottom: -10px
-//     left: 50%
-//     width: 0
-//     height: 0
-//     border-style: solid
-//     border-width: 10px 10px 0 10px
-//     border-color: $bgcolor transparent transparent transparent
-
 
 // =btn--transparent
 //   .btn__transparent
-//       font-size: 17px
+//     font-size: 17px
 //       color: white
 //       margin-top: 10px
 //       display: inline-block

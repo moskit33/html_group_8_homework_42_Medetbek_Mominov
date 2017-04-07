@@ -4,13 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>TC</title> 
 </head>
 <body>
 	<div class="container">
 		<header class="header">
+
 			<a class="header__logo" href="#">Site name</a>
 			<nav class="header__menu">
 				<span href="" class="menu__btn"><img src="images/mobile-btn-01.svg" alt="mobile-btn"></span>
@@ -23,6 +26,8 @@
 			</nav>
 		</header>
 	</div>
+	
+
 	<section class="promo">
 		<div class="promo__title">
 			<h2 class="title__big">Cras ornare trist lorem ipsum</h2>
@@ -31,12 +36,75 @@
 		</div>
 	</section>
 	<div class="services">
-		<div class="services__blocks">
-			<a href="#" class="blocks__img"></a>
-			<h2 class="blocks__title"></h2>
-			<p class="blocks__text"></p>
+		<div class="container">
+			<div class="row">
+				<div class="services__block-red col-xs-12 col-sm-6 col-md-6">
+					<span href="#" class="icon-pencil"></span>
+					<h2 class="services__title">Lorem ipsum.</h2>
+					<p class="services__text">Sed adipiscing ornare risus. Morbi est est, b landit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper</p>
+				</div>
+				<div class="services__block-yellow col-xs-12 col-sm-6 col-md-6">
+					<span href="#" class="icon-message"></span>
+					<h2 class="services__title">Lorem ipsum.</h2>
+					<p class="services__text">Sed adipiscing ornare risus. Morbi est est, b landit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper</p>
+				</div>
+				<div class="services__block-green col-xs-12 col-sm-6 col-md-6">
+					<span href="#" class="icon-crown"></span>
+					<h2 class="services__title">Lorem ipsum.</h2>
+					<p class="services__text">Sed adipiscing ornare risus. Morbi est est, b landit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper</p>
+				</div>
+				<div class="services__block-purple col-xs-12 col-sm-6 col-md-6">
+					<span href="#" class="icon-user"></span>
+					<h2 class="services__title">Lorem ipsum.</h2>
+					<p class="services__text">Sed adipiscing ornare risus. Morbi est est, b landit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper</p>
+				</div>
+			</div>
 		</div>
 	</div>
+	<section class="team">
+		<div class="container">
+			<div class="row">
+				<div class="team__title">
+					<h2 class="title__big">Lorem ipsum.</h2>
+					<p class="title__litle">Lorem ipsum dolor sit amet, consectetur.</p>	
+				</div>	
+				<div class="team__col-red col-md-4 col-sm-6 col-xs-12">
+					<div class="team__inner">
+						<a href="#" class="col__avatar"></a>
+						<p class="col__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aliquam incidunt placeat asperiores.</p>
+						<a href="#" class="btn-red">Read more</a>
+					</div>
+				</div>
+				<div class="team__col-yellow col-md-4 col-sm-6 col-xs-12">
+					<div class="team__inner">
+						<a href="#" class="col__avatar"></a>
+						<p class="col__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aliquam incidunt placeat asperiores.</p>
+						<a href="#" class="btn-yellow">Read more</a>
+					</div>
+				</div>
+				<div class="team__col-green col-md-4 col-sm-6 col-xs-12">
+					<div class="team__inner">
+						<a href="#" class="col__avatar"></a>
+						<p class="col__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aliquam incidunt placeat asperiores.</p>
+						<a href="#" class="btn-green">Read more</a>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</section>
+	<section class="contact">
+		<div class="container">
+			<div class="contact__title">
+				<span href="#" class="icon-pencil"></span>
+				<div class="contact__title">
+					<h2 class="title__big">Lorem ipsum.</h2>
+					<p class="title__litle">Lorem ipsum dolor sit amet, consectetur.</p>	
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<footer class="footer"></footer>
 	<script src="vendor/jquery/jquery-3.1.1.min.js"></script>
 	<script src="js/main.js"></script>
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
