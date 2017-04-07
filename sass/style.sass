@@ -22,16 +22,17 @@ $icons: 'pencil', 'message', 'crown', 'user', 'mail'
 	&::after
 		content: ''
 		position: absolute
-		top: 15px
-		left: 15px
-		+size(70px)
+		top: 20px
+		left: 20px
+		+size(60px)
 		background: url(../images/svg-icons-services-01.svg) no-repeat
+		background-size: 60px
 
 @for $i from 0 to length($icons)
 	.icon-#{nth($icons, $i+1)}
 		@extend %icon
 		&::after
-			background-position-y: -(59px * $i)
+			background-position-y: -(62px * $i)
 
 body
 	background: #29606b
@@ -70,8 +71,6 @@ body
 			right: -7px
 			top: -36px
 			cursor: pointer
-			// background: url(../images/mobile-btn-01.svg) no-repeat
-			// background-size: 80%
 			img
 				width: 47px
 				height: auto

@@ -117,11 +117,12 @@
 .icon-pencil::after, .icon-message::after, .icon-crown::after, .icon-user::after, .icon-mail::after {
   content: "";
   position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 70px;
-  height: 70px;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
   background: url(../images/svg-icons-services-01.svg) no-repeat;
+  background-size: 60px;
 }
 
 .icon-pencil::after {
@@ -129,19 +130,19 @@
 }
 
 .icon-message::after {
-  background-position-y: -59px;
+  background-position-y: -62px;
 }
 
 .icon-crown::after {
-  background-position-y: -118px;
+  background-position-y: -124px;
 }
 
 .icon-user::after {
-  background-position-y: -177px;
+  background-position-y: -186px;
 }
 
 .icon-mail::after {
-  background-position-y: -236px;
+  background-position-y: -248px;
 }
 
 body {
