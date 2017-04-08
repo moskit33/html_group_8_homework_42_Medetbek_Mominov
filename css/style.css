@@ -7,7 +7,8 @@
   font-size: 15px;
   font-family: "Fjalla One";
   font-weight: 400;
-  padding: 10px 15px;
+  padding: 10px 20px;
+  margin-top: 9%;
 }
 
 .btn-red::after, .btn-yellow::after, .btn-green::after, .btn-purple::after {
@@ -23,11 +24,58 @@
 
 .services__block-red, .services__block-yellow, .services__block-green, .services__block-purple {
   display: block;
-  padding: 5% 0 10%;
+  padding: 5% 0 4.5%;
   color: white;
   text-align: center;
   color: white;
   align-self: center;
+}
+
+.team .team__title, .contact .contact__title {
+  color: white;
+  text-transform: uppercase;
+}
+.team .team__title .title__big, .contact .contact__title .title__big {
+  font-size: 29px;
+}
+.team .team__title .title__litle, .contact .contact__title .title__litle {
+  font-size: 21px;
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+.team .team__title .title__litle::before, .contact .contact__title .title__litle::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -51%;
+  width: 37%;
+  border-bottom: 1px solid #387d89;
+}
+@media screen and (min-width: 760px) {
+  .team .team__title .title__litle::before, .contact .contact__title .title__litle::before {
+    display: block;
+  }
+}
+.team .team__title .title__litle::after, .contact .contact__title .title__litle::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: -51%;
+  width: 37%;
+  border-bottom: 1px solid #387d89;
+}
+@media screen and (min-width: 760px) {
+  .team .team__title .title__litle::after, .contact .contact__title .title__litle::after {
+    display: block;
+  }
+}
+
+.contact .contact__form .form__name, .contact .contact__form .form__email, .contact .contact__form .form__message {
+  background: #245963;
+  border: 1px solid #387d89;
 }
 
 .btn-red {
@@ -323,42 +371,20 @@ body {
 .services .services__title {
   font-size: 29px;
   text-transform: uppercase;
+  margin: 20px 0px 4px;
 }
 .services .services__text {
   font-size: 16px;
+  font-family: "SourceSansPro";
+  padding: 0 45px;
 }
 
 .team {
-  padding-top: 6%;
+  padding-top: 5.6%;
   text-align: center;
 }
 .team .team__title {
-  color: white;
-  text-transform: uppercase;
-}
-.team .team__title .title__big {
-  font-size: 29px;
-}
-.team .team__title .title__litle {
-  font-size: 21px;
-  position: relative;
-  display: inline-block;
-}
-.team .team__title .title__litle::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  left: -51%;
-  width: 37%;
-  border-bottom: 1px solid #387d89;
-}
-.team .team__title .title__litle::after {
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: -51%;
-  width: 37%;
-  border-bottom: 1px solid #387d89;
+  padding-bottom: 5.4%;
 }
 .team .col__avatar {
   display: inline-block;
@@ -372,36 +398,80 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 15px;
   color: #76b2be;
+  margin-top: 8%;
+  padding: 0 20px;
+  line-height: 25px;
 }
 
 .contact {
   text-align: center;
+  padding: 5.7% 0;
 }
-.contact .contact__title {
+.contact .contact__title .icon-mail {
+  margin-bottom: 23px;
+}
+.contact .contact__form {
+  width: 100%;
+  max-width: 570px;
+  margin: 0 auto;
+  padding: 3% 0;
+}
+.contact .contact__form .form__name {
+  width: 100%;
+  max-width: 270px;
+  padding: 12px 10px;
+  float: left;
+}
+.contact .contact__form .form__email {
+  width: 100%;
+  max-width: 270px;
+  padding: 12px 10px;
+  float: right;
+}
+.contact .contact__form .form__message {
+  width: 100%;
+  padding: 52px 10px;
+  margin: 31px 0 5px;
+}
+.contact .contact__form .form__btn {
+  font-size: 15px;
   color: white;
+  margin-top: 24px;
+  display: inline-block;
+  padding: 10px 32px;
+  border: 2px solid #387d89;
+  border-bottom: none;
+  position: relative;
+  background: #245963;
   text-transform: uppercase;
 }
-.contact .contact__title .title__big {
-  font-size: 29px;
-}
-.contact .contact__title .title__litle {
-  font-size: 21px;
-  position: relative;
-  display: inline-block;
-}
-.contact .contact__title .title__litle::before {
-  content: "";
+.contact .contact__form .form__btn .btn--triangle {
+  display: block;
   position: absolute;
-  top: 12px;
-  left: -51%;
-  width: 37%;
-  border-bottom: 1px solid #387d89;
+  bottom: -10px;
+  transform: rotate(45deg);
+  left: 40%;
+  border: 2px solid #387d89;
+  padding: 9px;
+  border-left: none;
+  border-top: none;
+  background: #245963;
 }
-.contact .contact__title .title__litle::after {
+.contact .contact__form .form__btn::before {
   content: "";
+  display: block;
   position: absolute;
-  top: 12px;
-  right: -51%;
-  width: 37%;
-  border-bottom: 1px solid #387d89;
+  bottom: 0px;
+  left: 0px;
+  border: 1px solid #387d89;
+  width: 40%;
+}
+.contact .contact__form .form__btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border: 1px solid #387d89;
+  width: 40%;
 }

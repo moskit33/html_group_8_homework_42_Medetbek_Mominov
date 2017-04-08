@@ -178,15 +178,18 @@ body
 	.services__title
 		font-size: 29px
 		text-transform: uppercase
+		margin: 20px 0px 4px
 	.services__text
 		font-size: 16px
+		font-family: 'SourceSansPro'
+		padding: 0 45px
 
 .team
-	padding-top: 6%
+	padding-top: 5.6%
 	text-align: center
-	
 	.team__title
-		+title_block
+		@extend %title_block
+		padding-bottom: 5.4%
 	.col__avatar
 		display: inline-block
 		background-color: #FFF
@@ -197,8 +200,73 @@ body
 		font-family: 'Source Sans Pro', sans-serif
 		font-size: 15px
 		color: #76b2be
-
+		margin-top: 8%
+		padding: 0 20px
+		line-height: 25px
 .contact
 	text-align: center
+	padding: 5.7% 0
 	.contact__title
-		+title_block
+		@extend %title_block
+		.icon-mail
+			margin-bottom: 23px
+	.contact__form
+		width: 100%
+		max-width: 570px
+		margin: 0 auto
+		padding: 3% 0
+		.form__name
+			width: 100%
+			max-width: 270px
+			padding: 12px 10px
+			float: left
+			+contact__inputs
+		.form__email
+			width: 100%
+			max-width: 270px
+			padding: 12px 10px
+			float: right
+			+contact__inputs
+		.form__message
+			width: 100%
+			+contact__inputs
+			padding: 52px 10px
+			margin: 31px 0 5px
+		.form__btn
+			font-size: 15px
+			color: white
+			margin-top: 24px
+			display: inline-block
+			padding: 10px 32px
+			border: 2px solid #387d89
+			border-bottom: none
+			position: relative
+			background: #245963
+			text-transform: uppercase
+			.btn--triangle
+				display: block
+				position: absolute
+				bottom: -10px
+				transform: rotate(45deg)
+				left: 40%
+				border: 2px solid #387d89
+				padding: 9px
+				border-left: none
+				border-top: none
+				background: #245963
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0px
+				left: 0px
+				border: 1px solid #387d89
+				width: 40%
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0px
+				right: 0px
+				border: 1px solid #387d89
+				width: 40%

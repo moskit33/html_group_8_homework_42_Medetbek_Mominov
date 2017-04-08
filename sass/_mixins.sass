@@ -9,7 +9,8 @@
     size: 15px
     family: 'Fjalla One'
     weight: 400
-  padding: 10px 15px
+  padding: 10px 20px
+  margin-top: 9%
 
 %triangle
   content: ''
@@ -36,7 +37,7 @@
 
 %services
   display: block
-  padding: 5% 0 10%
+  padding: 5% 0 4.5%
   color: white
   text-align: center
   color: white
@@ -56,26 +57,42 @@
   width: $size
   height: $size
 
-=title_block
+%title_block
   color: white
   text-transform: uppercase
   .title__big
     font-size: 29px
+    // margin-top: 23px
   .title__litle
     font-size: 21px
     position: relative
     display: inline-block
+    margin-top: 10px
     &::before
+      display: none
       content: ''
       position: absolute
       top: 12px
       left: -51%
       width: 37%
       border-bottom: 1px solid #387d89
+      @media screen and (min-width: 760px)
+        display: block
     &::after
+      display: none
       content: ''
       position: absolute
       top: 12px
       right: -51%
       width: 37%
       border-bottom: 1px solid #387d89
+      @media screen and (min-width: 760px)
+        display: block      
+
+%contact__input
+  background: #245963
+  border: 1px solid #387d89
+
+
+=contact__inputs
+  @extend %contact__input
