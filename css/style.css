@@ -418,15 +418,26 @@ body {
 }
 .contact .contact__form .form__name {
   width: 100%;
-  max-width: 270px;
   padding: 12px 10px;
   float: left;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 588px) {
+  .contact .contact__form .form__name {
+    max-width: 270px;
+    margin-bottom: 0;
+  }
 }
 .contact .contact__form .form__email {
   width: 100%;
-  max-width: 270px;
   padding: 12px 10px;
-  float: right;
+  float: left;
+}
+@media screen and (min-width: 588px) {
+  .contact .contact__form .form__email {
+    max-width: 270px;
+    float: right;
+  }
 }
 .contact .contact__form .form__message {
   width: 100%;

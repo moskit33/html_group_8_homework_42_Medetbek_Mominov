@@ -217,16 +217,21 @@ body
 		padding: 3% 0
 		.form__name
 			width: 100%
-			max-width: 270px
+			padding: 12px 10px
+			float: left
+			margin-bottom: 10px
+			+contact__inputs
+			@media screen and (min-width: 588px)
+				max-width: 270px
+				margin-bottom: 0
+		.form__email
+			width: 100%
 			padding: 12px 10px
 			float: left
 			+contact__inputs
-		.form__email
-			width: 100%
-			max-width: 270px
-			padding: 12px 10px
-			float: right
-			+contact__inputs
+			@media screen and (min-width: 588px)
+				max-width: 270px
+				float: right
 		.form__message
 			width: 100%
 			+contact__inputs
